@@ -16,7 +16,7 @@ module.exports = () => {
     mode: NODE_ENV === 'production' ? 'production' : 'development',
     entry: [...optionalPath('scss/style.scss'), path.resolve(__dirname, 'src')],
     output: {
-      path: path.resolve(__dirname, 'dist'),
+      path: path.resolve(__dirname, 'docs'),
       publicPath: '/'
     },
     devtool: 'source-map',
