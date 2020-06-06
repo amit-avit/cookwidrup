@@ -1,0 +1,9 @@
+
+**/node_modules/
+lib/
+lib-commonjs/
+dist/main.js.map
+css/
+coverage/
+.vscode/
+.DS_Store
