@@ -25,16 +25,24 @@
   "scripts": {
     "test": "run-script eslint && run-script tsc --noEmit && run-script jest",
     "start": "cross-env NODE_ENV=development webpack-dev-server",
-    "clean": "del-cli lib lib-commonjs dist css coverage && jest --clearCache",
+    "clean": "del-cli lib lib-commonjs dist css coverage ../200.html ../index.html ../main.js ../main.js.map --force && jest --clearCache",
     "analyze": "cross-env NODE_ENV=production WEBPACK_ANALYZE=true webpack",
-    "build": "run-script build:webapp",
+    "build": "run-script clean && run-script build:webapp",
     "build:webapp": "cross-env NODE_ENV=production webpack",
     "eslint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --ignore-pattern \"/__demo__/\" --no-error-on-unmatched-pattern",
     "jest": "cross-env NODE_ENV=test jest --passWithNoTests",
     "prepack": "run-script build",
     "reformat": "run-script eslint --fix --quiet",
     "tsc": "tsc",
-    "watch": "webpack --progress --colors --debug --watch"
+    "watch": "webpack --progress --colors --debug --watch",
+    "postbuild": "react-snap"
+  },
+  "reactSnap": {
+    "source": "..",
+    "minifyHtml": {
+      "collapseWhitespace": true,
+      "removeComments": true
+    }
   },
   "dependencies": {
     "@types/react": "^16.9.35",
@@ -81,6 +89,7 @@
     "jest": "^26.0.1",
     "jest-styled-components": "^7.0.2",
     "prettier": "^2.0.5",
+    "react-snap": "^1.23.0",
     "react-test-renderer": "^16.13.1",
     "sass": "^1.26.8",
     "sass-loader": "^8.0.2",

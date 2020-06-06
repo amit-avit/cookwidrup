@@ -20,7 +20,6 @@ module.exports = () => {
       publicPath: '/'
     },
     devtool: 'source-map',
-    watch: true,
     resolve: {
       extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
       alias: {

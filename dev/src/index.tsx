@@ -1,14 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import styled from 'styled-components';
+import { App } from './components/App';
 
-const StyledDiv = styled.div`
-  font-size: 2rem;
-  font-weight: bold;
-`;
-
-ReactDOM.render(
-  // TODO: Implement web application.
-  <StyledDiv id="application">Hello, world!!!!</StyledDiv>,
-  document.getElementById('root')
-);
+const rootElement = document.getElementById("root") as HTMLElement;
+if (rootElement.hasChildNodes()) {
+  ReactDOM.hydrate(<App />, rootElement);
+} else {
+  ReactDOM.render(<App />, rootElement);
+}
