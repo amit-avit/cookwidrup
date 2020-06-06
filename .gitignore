@@ -2,7 +2,7 @@
 **/node_modules/
 lib/
 lib-commonjs/
-docs/main.js.map
+main.js.map
 css/
 coverage/
 .vscode/

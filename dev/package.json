@@ -27,7 +27,7 @@
     "start": "cross-env NODE_ENV=development webpack-dev-server",
     "clean": "del-cli lib lib-commonjs dist css coverage && jest --clearCache",
     "analyze": "cross-env NODE_ENV=production WEBPACK_ANALYZE=true webpack",
-    "build": "run-script clean && run-script build:webapp",
+    "build": "run-script build:webapp",
     "build:webapp": "cross-env NODE_ENV=production webpack",
     "eslint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --ignore-pattern \"/__demo__/\" --no-error-on-unmatched-pattern",
     "jest": "cross-env NODE_ENV=test jest --passWithNoTests",
