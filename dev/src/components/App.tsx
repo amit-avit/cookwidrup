@@ -1,15 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
-import { LasagnaRecipeVideo } from './lasagna';
+import { Header } from './header';
+import { VideoCardsContainer } from './video-cards-container';
+import { Footer } from './footer';
 
 const StyledDiv = styled.div`
-  font-size: 2rem;
-  font-weight: bold;
+  height: auto;
 `;
 
 export const App = () => (
   <StyledDiv id="application">
-    <div>Hello, world!!!!</div>
-    <LasagnaRecipeVideo />
+    <Header />
+    <VideoCardsContainer />
+    <Footer />
   </StyledDiv>
 );
