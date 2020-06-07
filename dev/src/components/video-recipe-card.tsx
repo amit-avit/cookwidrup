@@ -12,6 +12,7 @@ export const VideoRecipeCard = (props: VideoRecipeCardProps) => {
             style={{
                 display: "inline-block",
                 height: "500px",
+                maxHeight: "500px",
                 paddingInlineStart: "8px",
                 paddingInlineEnd: "8px",
                 margin: "8px",
@@ -26,8 +27,8 @@ export const VideoRecipeCard = (props: VideoRecipeCardProps) => {
             </h3>
             <div>
                 <iframe
-                    width="533"
-                    height="300"
+                    width="520"
+                    height="293"
                     src={props.videoLink}
                     frameBorder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
