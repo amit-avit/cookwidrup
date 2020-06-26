@@ -8,6 +8,7 @@ export const VideoCardsContainer = () => {
             style={{
                 display: "flex",
                 flexWrap: "wrap",
+                justifyContent: "center",
             }}
         >
             {data.videoCards.map((props) => <VideoRecipeCard {...props} key={props.title} />)}

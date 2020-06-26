@@ -13,6 +13,7 @@ export const VideoRecipeCard = (props: VideoRecipeCardProps) => {
                 display: "inline-block",
                 height: "500px",
                 maxHeight: "500px",
+                maxWidth: "520px",
                 paddingInlineStart: "8px",
                 paddingInlineEnd: "8px",
                 margin: "8px",
